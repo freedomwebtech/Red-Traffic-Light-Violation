@@ -64,7 +64,7 @@ while True:
         cy = int(y3 + y4) // 2
 #        cv2.circle(frame,(cx,cy),4,(255,0,0),-1)
 #        cv2.rectangle(frame, (x3, y3), (x4, y4), (0, 0, 255), 2)
-        result = cv2.pointPolygonTest(np.array(area, np.int32), (cx, cy), False)
+        result = cv2.pointPolygonTest(np.array(area, np.int32), ((cx, cy)), False)
         if result>=0:
            if 'car' in c and detected_label == "RED":
                 cvzone.putTextRect(frame, f'{id}', (x3, y3), 1, 1)
